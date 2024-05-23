@@ -1,0 +1,24 @@
+<div class="p-3">
+
+  <ul class="nav nav-pills">
+    <li>
+<!--      <button routerLink="/home" class="btn btn-outline-primary ms-2 " >Home</button>-->
+
+      <button [ngClass]="currentRoute == 'home' ? 'btn btn-primary ms-2 ':'btn btn-outline-primary ms-2 '"  (click)="GoToHome()"  >Home</button>
+    </li>
+
+    <li>
+<!--      <button routerLink="/products" class="btn btn-outline-primary ms-2" >Products</button>-->
+
+      <button [ngClass]="currentRoute == 'products' ? 'btn btn-primary ms-2 ':'btn btn-outline-primary ms-2 '"  (click)="GoToClients()"   >Clients</button>
+    </li>
+    <li>
+      <!--      <button routerLink="/products" class="btn btn-outline-primary ms-2" >Products</button>-->
+      
+            <button [ngClass]="currentRoute == 'byid' ? 'btn btn-primary ms-2 ':'btn btn-outline-primary ms-2 '"  (click)="Gobyid()"   >byid</button>
+          </li>
+  </ul>
+</div>
+<router-outlet>
+
+</router-outlet>

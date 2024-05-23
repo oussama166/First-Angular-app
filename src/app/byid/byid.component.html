@@ -1,0 +1,35 @@
+<div class="p-3">
+
+    <div class="card">
+      <div class="card-header align-items-center">
+        <input [(ngModel)]="keyword" type="text">
+        <button (click)="search(keyword)" class="btn btn-outline-success ms-2">search</button>
+        <p>You are looking for {{ keyword }}</p>
+      </div>
+      <div class="card-body">
+        <table class="table">
+          <thead>
+          <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Adresse</th>
+          </tr>
+          </thead>
+  
+          <tbody *ngIf="clients">
+          <tr>
+            <td> {{ clients.name }}</td>
+            <td> {{ clients.email }}</td>
+            <td> {{ clients.adresse }}</td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+  
+  
+      <div class="card-footer">
+        <p>footer</p>
+      </div>
+    </div>
+  </div>
+  
